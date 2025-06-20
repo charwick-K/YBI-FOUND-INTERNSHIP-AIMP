@@ -52,6 +52,43 @@
 - **How it works**: Suggests movies based on user preferences and item similarities.
 - **Learn more**: [Content-Based vs Collaborative Filtering (GeeksforGeeks)](https://www.geeksforgeeks.org/machine-learning/content-based-vs-collaborative-filtering-difference/), [Google’s Collaborative Filtering Guide](https://developers.google.com/machine-learning/recommendation/collaborative/basics)
 
+## ⚙️ How to Run These Projects
+
+### 🔁 Option 1: Run with **Google Colab**
+> _No installation required – just a browser!_
+
+1. **Open Google Colab**: [https://colab.research.google.com](https://colab.research.google.com)
+2. Click **File > Open Notebook**, then select the **GitHub tab**.
+3. Paste the project’s notebook GitHub URL (if available) or upload the `.ipynb` file manually.
+4. To mount a dataset:
+   ```python
+   from google.colab import files
+   uploaded = files.upload()
+   ```
+   or read directly from the GitHub CSV URL using pandas:
+   ```python
+   import pandas as pd
+   url = 'https://github.com/YBI-Foundation/Dataset/raw/main/Bank%20Churn%20Modelling.csv'
+   data = pd.read_csv(url)
+   ```
+5. Execute cells one-by-one using `Shift + Enter`.
+
 ---
 
-Let me know if you'd like these links compiled into a markdown file or if you want to explore code examples for any of these!
+### 💻 Option 2: Run Locally with **Anaconda & Jupyter Notebook**
+
+#### ✅ Requirements:
+- Python ≥ 3.7
+- Anaconda (includes Jupyter, NumPy, Pandas, scikit-learn, etc.)
+
+#### 🛠 Setup:
+1. **Install Anaconda**: [https://www.anaconda.com/products/distribution](https://www.anaconda.com/products/distribution)
+2. Open **Anaconda Navigator** and launch **Jupyter Notebook**.
+3. Clone this GitHub repo or download the `.ipynb` notebook and dataset files.
+4. Navigate to the project folder in Jupyter and open the notebook file.
+5. Install any missing libraries in a code cell:
+   ```python
+   !pip install pandas scikit-learn matplotlib seaborn
+   ```
+6. Run the notebook cells and explore!
+
